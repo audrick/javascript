@@ -34,11 +34,11 @@ function deposit()
 	if(balance < 0)
 	{
    	 $('#balance').css('background-color','red');
-   	$('#balance > h2').css('color','white');
+   	 $('#balance > h2').css('color','white');
 	}
 	else
 	{    
    	 $('#balance').css('background-color','white');
-    	$('#balance > h2').css('color','black');
+     $('#balance > h2').css('color','black');
 	}
 }

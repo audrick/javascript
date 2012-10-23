@@ -1,0 +1,215 @@
+/*
+Project Name: ATM Javascript
+Client: General Assembly
+Author: adrian, aaron, audric, tim
+Developer @GA in NYC
+*/
+
+/*Font*/
+
+@font-face {
+  font-family: 'Ostrich';
+  src: url('../fonts/ostrich-light-webfont.eot?') format('eot'), 
+  url('../fonts/ostrich-light-webfont.woff') format('woff'), 
+  url('../fonts/ostrich-light-webfont.ttf') format('truetype');
+}
+
+/*generl*/
+
+body {
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  background: #D6D6D6 url("http://myemma.com/static/global/img/bg-hatch.png") 50% 0;
+}
+
+h1 {
+  font-size: 120px;
+  font-weight: bold;
+  width: 960px;
+  letter-spacing: -4px;
+  text-align: center;
+  padding: 25px 0;
+  text-indent: 50px;
+    letter-spacing: 4px;
+    font-family: 'Ostrich', serif;
+}
+
+/* Box Model Hack */
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.alignright {
+    float: right;
+    padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+    float: left;
+    padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/* Center the container */
+#container {
+  width: 960px;
+  height: 350px;
+  margin: 50px auto 20px;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  box-shadow: 10px;
+  padding: 5px 20px 5px 20px;
+}
+
+#checking{
+  float:left;
+}
+
+#savings{
+  float: right;
+}
+
+.style_box{
+  margin-top: 20px;
+  width:440px;
+  background-color:#333;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px 5px 5px 5px;
+}
+
+.style_balance{
+  
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background: #FFF;
+  border: 3px solid #000;
+  color: #000;
+  
+}
+
+/*#balance {
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  background: #FFF;
+  border: 3px solid #000;
+  color: #000;
+}*/
+
+#form, #form2 {
+  width: 400px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+
+#form ul li, #form2 ul li, #form input, #form2 input {
+float: left;
+}
+
+  #form ul li a, #form2 ul li a  {
+  display: block;
+  margin-left: 20px;
+  }
+
+input, textarea {
+  width:150px;
+  height:27px;
+  background:#efefef;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border:1px solid #dedede;
+  padding:1px;
+  font-size: 10px;
+  color:#3a3a3a;
+}
+
+/* Button Styles */
+.b1,.b3 {
+  border-top: 1px solid #22a164;
+  background: #47946f;
+  background: -webkit-gradient(linear, left top, left bottom, from(#33873d), to(#47946f));
+  background: -webkit-linear-gradient(top, #33873d, #47946f);
+  background: -moz-linear-gradient(top, #33873d, #47946f);
+  background: -ms-linear-gradient(top, #33873d, #47946f);
+  background: -o-linear-gradient(top, #33873d, #47946f);
+  padding: 6px 12px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+  .b1:hover,.b3:hover {
+    border-top-color: #c2c4c2;
+    background: #c2c4c2;
+    color: #256b67;
+  }
+
+  .b1:active,.b3:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+  }
+
+.b2,.b4 {
+  border-top: 1px solid #f21d1d;
+  background: #ed1d1d;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e01933), to(#ed1d1d));
+  background: -webkit-linear-gradient(top, #e01933, #ed1d1d);
+  background: -moz-linear-gradient(top, #e01933, #ed1d1d);
+  background: -ms-linear-gradient(top, #e01933, #ed1d1d);
+  background: -o-linear-gradient(top, #e01933, #ed1d1d);
+  padding: 6px 12px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: white;
+  font-size: 14px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+  .b2:hover,.b4:hover {
+    border-top-color: #c2c4c2;
+    background: #c2c4c2;
+    color: #256b67;
+  }
+
+  .b2:active,.b4:active {
+      border-top-color: #1b435e;
+      background: #1b435e;
+    }
