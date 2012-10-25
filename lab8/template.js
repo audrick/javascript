@@ -1,10 +1,10 @@
-var counter = 0;				// Global Variable
+ var counter = 0;				// Global Variable
 
 
 $(function(){
 
 	setTimeout(display_text, 3000);
-	setInterval(display_more, 100);
+	setInterval(display_more, 1000);
 
 
 });
