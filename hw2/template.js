@@ -1,4 +1,4 @@
-var selected_color = null;					//global variable
+var selected_color = null;
 
 $(function(){
 
@@ -14,34 +14,32 @@ $(function(){
 function add_colors()
 {
 	var colors = $('#colors_string').val();
-	colors = colors.split(', ');				//this lines turns it into an array (watch the spacing)
-	for(var i = 0; i < colors.length; i++)		// 'For' Loop
+	colors = colors.split(', ');
+	for(var i = 0; i < colors.length; i++)
 	{
-		var color = $('<div>');					//creates a color div, but it is floating out in space somewhere
+		var color = $('<div>');
 		color.addClass('color');
-		color.css('background-color', colors[i])		// i = 0
-		$('#colors').append(color);					// append places the div (color) at the bottom
+		color.css('background-color', colors[i])
+		$('#colors').append(color);
 	}
 }
 
 function change_bg()
 {
-	var color = $(this).css('background-color');  			// the 'this' function tells you which box you are hovering over
+	var color = $(this).css('background-color');
 	$('#colors_string').css('background-color', color);
 }
 
-function delete_color()									// double-click the box to remove the color box
+function delete_color()
 {
-	$(this).remove();									//the color box that you double-clicked on
-}														
+	$(this).remove();
+}
 
-function toggle_select_color()							
+function toggle_select_color()
 {
-	if(selected_color != this)						//initially, the selected_color is null (no color)
+	if(selected_color != this)
 	{
-		$(selected_color).removeClass('selected');  
-
-
+		$(selected_color).removeClass('selected');
 		selected_color = this;
 		$(selected_color).addClass('selected');
 	}
@@ -57,7 +55,7 @@ function left()
 	if(selected_color != null)
 	{
 		var previous = $(selected_color).prev();
-		previous.before(selected_color);			// before + after is different than prepend + append
+		previous.before(selected_color);
 	}
 }
 

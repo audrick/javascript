@@ -1,58 +1,29 @@
+var counter = 0;				// Global Variable
+
+
 $(function(){
-	
-	$('.a').mouseenter(color_the_box);
-	$('.a').mouseleave(make_it_white);
-	$('#add').click(add_node);
-	$('#addcolors').click(add_colors);
-	$('#boxes').on('hover', '.box', make_pretty);		///.on (study this like your life depends on it!!!!
+
+	setTimeout(display_text, 3000);
+	setInterval(display_more, 100);
+
 
 });
 
-function make_pretty()
+function display_more()
 {
-	$(this).toggleClass('alert');						//these boxes were created dynamical;y, so when toggled over
-}														//none of the box characteristics work
-
-
-
-
-function add_colors()
-{
-	var count = $('#count').val();
-	count= parseInt(count);
-	for(var i = 0; i < count; i++)
-	{
-		var box = $('<div>');							//actually creating a <div> element
-		box.text(i);
-		box.addClass('box');							//styling the div element with css	
-		$('#boxes').append(box);
-	}
-
-
+	var d=$('<div>');
+	// d.text(counter);   		//if you do not want counter
+	d.addClass('funky');
+	$('#test').prepend(d);
+	counter ++;
+	var color1 = counter % 255;
+	var color2 = (counter + counter) % 255;
+	var color3 = (counter * counter) % 255;
+	var color_string = 'rgb('+ color1 +' , '+ color2 +', '+ color3 +')';
+	d.css('background-color', color_string);
 }
 
-function add_node()
+function display_text()
 {
-	var element = $('#element').val();
-	var node = $('<' + element + '>');		//('<') create an element in .JS
-	var css = $('#css').val();
-	var text = $('#text').val();
-	node.addClass(css);
-	node.text(text);
-	$('#elements').prepend(node);				//attaches p tages to the elements
+	$('#test').text('hello world');
 }
-
-function color_the_box ()
-{
-	var color = $(this).text();
-	$(this).css('background-color', color);
-}
-
-function make_it_white ()
-{
-	$(this).css('background-color', 'white');
-}
-
-
-
-
