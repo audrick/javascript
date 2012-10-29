@@ -1,12 +1,19 @@
 
 $(function(){
 
-$('#Add').click(function(){
-      var value1 = $('Number1').val();
-      var value2 = $('Number2').val();
-      var sum = parseInt(value1, 10) + parseInt(value2, 10);
-      $('#Sum').html(sum);
-   });
+$('#add').click(add);
+
 });
+
+function add()
+{
+	var a = parseInt($('#n1').val());
+	var b = parseInt($('#n2').val());
+	var c = a + b;
+
+	$('#sum').text(c);
+
+}
+
 
 
