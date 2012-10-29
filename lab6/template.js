@@ -12,7 +12,7 @@ $(function(){
 function large_green()
 {
 	var d = $('#output');
-	d.toggleClass("big_hover");
+	d.toggleClass("big_hover");x`
 	
 }
 

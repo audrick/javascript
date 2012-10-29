@@ -1,0 +1,21 @@
+.box {
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	border: 1px solid black;
+	float: left;
+	background-color: gray;
+}
+
+.select {
+	background: blue;
+	text: display;
+}
+
+.match {
+	background: green;
+}
+
+.orange {
+	background: orange;
+}

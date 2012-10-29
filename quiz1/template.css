@@ -1,10 +1,26 @@
 #sum {
 
-	width: 90px;
+	width: 120px;
+	height: 40px;
+  	font-size: 40px;
+  	margin-top: 0px;
   	margin: left;
   	padding: 20px;
   	text-align: center;
-  	background: #FFF;
+  	background-color: gray;
   	border: 1px solid #000;
-  	color: #000;
+  	border-radius: 10px;
+  	padding: 30px 5px 5px 5px;
+  	color: white;
+}
+
+.nstyle {
+	color: white;
+  	font-size: 50px:;
+  	margin-top: 0px;
+  	width:120px;
+  	background-color:#333;
+  	border: 1px solid black;
+  	border-radius: 10px;
+  	padding: 30px 5px 5px 5px;
 }

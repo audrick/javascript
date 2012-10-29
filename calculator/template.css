@@ -1,0 +1,91 @@
+body {
+  font-size: 20px;
+  font-family: Helvetica, sans-serif;
+  background: #D6D6D6 url("http://myemma.com/static/global/img/bg-hatch.png") 50% 0;
+}
+
+.h1 {
+	font: Arial, Helvetica, sans-serif;
+	font-size: 40px;
+	font-weight: bold;
+	margin: left;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+#container {
+  width: 960px;
+  height: 350px;
+  margin: 50px auto 20px;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  box-shadow: 10px;
+  padding: 5px 20px 5px 20px;
+}
+
+.style_box1, .style_box2 {
+  color: white;
+  font-size: 30px:;
+  margin-top: 0px;
+  width:120px;
+  background-color:#333;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px 5px 5px 5px;
+}
+
+.style_total {
+  
+  width: 400px;
+  margin: left;
+  padding: 30px;
+  text-align: left;
+  background: #FFF;
+  border: 3px solid #000;
+  color: #000;
+}
+
+.buttonstyle {
+   border-top: 1px solid #89959c;
+   background: #829bab;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a0afba), to(#829bab));
+   background: -webkit-linear-gradient(top, #a0afba, #829bab);
+   background: -moz-linear-gradient(top, #a0afba, #829bab);
+   background: -ms-linear-gradient(top, #a0afba, #829bab);
+   background: -o-linear-gradient(top, #a0afba, #829bab);
+   padding: 10px 10px;
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #3a4e5c;
+   background: #3a4e5c;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
